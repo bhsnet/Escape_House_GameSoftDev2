@@ -13,4 +13,9 @@ Saved
 *.xcodeproj
 *.xcworkspace
 
+# over 100mb
 Content/FirstPersonArms/Character/Textures/
+
+# Fab Library Asset
+Content/JustBStudios
+/PostOffice.png
