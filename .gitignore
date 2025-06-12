@@ -13,15 +13,18 @@ Saved
 *.xcodeproj
 *.xcworkspace
 
-# over 100mb
-Content/FirstPersonArms/Character/Textures/
+#Content
 
-# Fab Library Asset
-Content/JustBStudios
-/PostOffice.png
 
-Content/Into_Insanity_Vol_1/
+## over 100mb
+#Content/FirstPersonArms/Character/Textures/
 
-Content/Fab/
-Content/Made/
-Content/OldWest/
+## Fab Library Asset
+#Content/JustBStudios
+#/PostOffice.png
+
+#Content/Into_Insanity_Vol_1/
+
+#Content/Fab/
+#Content/Made/
+#Content/OldWest/
