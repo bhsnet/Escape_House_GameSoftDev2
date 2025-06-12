@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "TimerManager.h"
+
 #include "KillerAiController.generated.h"
 
 /**
@@ -21,21 +23,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
+
+	virtual void BeginPlay() override;
+
+	//이동속도 아님. AcceptanceRadius임.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = true))
-	float	moveSpeed = 50.f;
+	float	moveSpeed = 5.f;
 
-//protected:
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = true))
-//	UBehaviorTree* mAITree;
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = true))
-//	UBlackboardData* mAIBlackboard;
-//
-//	virtual void OnPossess(APawn* aPawn) override;
-//	virtual void OnUnPossess() override;
-//
-//public:
-//	void SetBehaviorTree(const FString& Path);
-//	void SetBlackboard(const FString& Path);
+	FTimerHandle MoveTimerHandle;
 
+	void myMoveToActor();
 
 };

@@ -16,21 +16,19 @@ private:
 	class USceneComponent* SightSource;
 
 public:
-	// Sets default values for this character's properties
 	AKiller();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	// 플레이어 바라보기 (교재 5장
 	void LookAtActor(const AActor* TargetActor);
 	bool CanSeeActor(const AActor* TargetActor) const;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
+	//ACharacter 상속
+	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 };
